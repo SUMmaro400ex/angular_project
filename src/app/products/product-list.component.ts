@@ -7,6 +7,17 @@ import {Component} from '@angular/core';
 
 export class ProductListComponent {
     pageTitle: string = 'Product List';
+    showImages: boolean = true;
+    filteredByText: string = '';
+    clicked(event) {
+        event.preventDefault();
+        this.showImages = !this.showImages;
+        this.imageButtonText = this.showImages ? "Hide Images" : "Show Images";
+    }
+    filterBoxChanged(event){
+        this.filteredByText = event.currentTarget.value;
+    }
+    imageButtonText: string = "Hide Images";
     products: any[] = [
     {
         "productId": 1,
