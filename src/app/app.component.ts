@@ -10,5 +10,5 @@ import { ProductService } from './products/product.service'
 })
 
 export class AppComponent {
-  title:string = 'Acme Product Management';
+  pageTitle:string = 'Acme Product Management';
 }
